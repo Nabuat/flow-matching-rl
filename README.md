@@ -26,3 +26,21 @@ If you are new to Flow Matching in Reinforcement Learning, we suggest exploring 
 3. **FM-RL Taxonomy**: Learn how existing methods differ in what they model and how reinforcement learning signals are incorporated.
 4. **Key Papers**: Explore a curated collection of representative FM-RL methods, organized by category.
 5. **Code & Resources**: Find available implementations, project pages, and additional learning materials.
+
+## Flow Matching Basics
+
+**Flow Matching (FM)** is a generative modeling framework for learning how to transform samples from a simple distribution, such as Gaussian noise, into samples from a complex target distribution.
+
+The main idea is to learn a **time-dependent velocity field** that tells each sample how it should move over time. Starting from an initial sample \(x_0\), generation follows an ordinary differential equation (ODE):
+
+\[
+\frac{dx_t}{dt} = v_\theta(x_t,t),
+\]
+
+where \(v_\theta(x_t,t)\) is a neural network that predicts the velocity of the sample \(x_t\) at time \(t\).
+
+Intuitively, you can think of Flow Matching as learning a **transport map**:
+
+**simple noise distribution → learned continuous flow → target data distribution**
+
+Unlike diffusion models, which are commonly described through iterative stochastic noising and denoising processes, Flow Matching directly learns the vector field governing this transport. This provides a convenient way to build expressive generative models while using an ODE for sampling.
