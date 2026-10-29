@@ -17,6 +17,16 @@ We organize key papers, methods, code repositories, and learning resources to ma
 [![PDF](https://img.shields.io/badge/PDF-Paper-blue.svg)](https://arxiv.org/pdf/2610.16275)
 [![BibTeX](https://img.shields.io/badge/BibTeX-Citation-orange.svg)](https://www.jmlr.org/tmlr/papers/bib/P6e5IC4gPe.bib)
 
+## Quick Navigation
+
+- [Getting Started](#getting-started)
+- [Flow Matching Basics](#flow-matching-basics)
+- [Why Flow Matching for RL?](#why-flow-matching-for-rl)
+- [FM-RL Taxonomy](#fm-rl-taxonomy)
+- [Key Papers](#key-papers)
+- [Code & Resources](#code--resources)
+- [Citation](#citation)
+
 ## Getting Started
 
 If you are new to Flow Matching in Reinforcement Learning, we suggest exploring the material in the following order:
