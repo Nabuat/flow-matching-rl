@@ -46,7 +46,7 @@ Intuitively, you can think of Flow Matching as learning a **transport map**:
 <p align="center">
   <img src="assets/figures/flow-matching-nutshell.svg"
        alt="Flow Matching in a nutshell"
-       width="90%">
+       width="100%">
 </p>
 
 <p align="center">
@@ -54,3 +54,28 @@ Intuitively, you can think of Flow Matching as learning a **transport map**:
 </p>
 
 Unlike diffusion models, which are commonly described through iterative stochastic noising and denoising processes, Flow Matching directly learns the vector field governing this transport. This provides a convenient way to build expressive generative models while using an ODE for sampling.
+
+## Why Flow Matching for RL?
+
+A central challenge in reinforcement learning is choosing a policy representation that is both **expressive** and **efficient to sample from**.
+
+Many standard continuous-control algorithms use a diagonal Gaussian policy,
+
+$$
+\pi_\theta(a \mid s)
+=
+\mathcal{N}\!\left(a;\mu_\theta(s),\Sigma_\theta(s)\right),
+$$
+
+which represents a single unimodal action distribution for each state. This can be restrictive when several distinct actions are all reasonable. For example, an agent navigating around an obstacle may be able to go either left or right. A unimodal policy may instead place probability mass between these two behaviors.
+
+Flow Matching provides a more expressive alternative. A flow-based policy can transform simple noise into a complex action distribution, allowing it to represent **multimodal and correlated behaviors** that are difficult to capture with a diagonal Gaussian policy.
+
+Generative policies based on diffusion models offer similar expressiveness, but typically generate actions through multiple iterative denoising steps. Flow Matching instead generates samples by integrating a learned deterministic ODE, providing an attractive trade-off between expressive policy modeling and sampling efficiency.
+
+In RL, this makes Flow Matching particularly useful when we want to:
+
+- model complex or multimodal action distributions,
+- learn from datasets containing multiple valid behaviors,
+- retain the flexibility of a generative policy, and
+- reduce the sampling overhead associated with long stochastic denoising chains.
