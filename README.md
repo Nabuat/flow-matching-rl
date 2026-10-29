@@ -33,9 +33,7 @@ If you are new to Flow Matching in Reinforcement Learning, we suggest exploring 
 
 The main idea is to learn a **time-dependent velocity field** that tells each sample how it should move over time. Starting from an initial sample \(x_0\), generation follows an ordinary differential equation (ODE):
 
-\[
-\frac{dx_t}{dt} = v_\theta(x_t,t),
-\]
+`dx_t / dt = v_theta(x_t, t)`
 
 where \(v_\theta(x_t,t)\) is a neural network that predicts the velocity of the sample \(x_t\) at time \(t\).
 
