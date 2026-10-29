@@ -43,4 +43,14 @@ Intuitively, you can think of Flow Matching as learning a **transport map**:
 
 **simple noise distribution → learned continuous flow → target data distribution**
 
+<p align="center">
+  <img src="assets/figures/flow-matching-nutshell.svg"
+       alt="Flow Matching in a nutshell"
+       width="90%">
+</p>
+
+<p align="center">
+  <em>Figure 1: Flow Matching in a nutshell. Training is simulation-free, while generation is performed by integrating the learned ODE from the base distribution to the target distribution.</em>
+</p>
+
 Unlike diffusion models, which are commonly described through iterative stochastic noising and denoising processes, Flow Matching directly learns the vector field governing this transport. This provides a convenient way to build expressive generative models while using an ODE for sampling.
