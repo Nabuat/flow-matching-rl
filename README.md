@@ -79,3 +79,11 @@ In RL, this makes Flow Matching particularly useful when we want to:
 - learn from datasets containing multiple valid behaviors,
 - retain the flexibility of a generative policy, and
 - reduce the sampling overhead associated with long stochastic denoising chains.
+
+### Policy Representation at a Glance
+
+| Policy type | Expressiveness | Sampling process | Main limitation |
+|---|---|---|---|
+| **Diagonal Gaussian** | Unimodal | Single network forward pass | Cannot naturally represent multiple distinct action modes |
+| **Diffusion policy** | Highly expressive and multimodal | Iterative stochastic denoising | Sampling can require many denoising steps |
+| **Flow-matching policy** | Highly expressive and multimodal | Integration of a learned ODE | Still requires numerical integration, although often with fewer steps than diffusion |
