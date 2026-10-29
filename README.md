@@ -86,4 +86,16 @@ In RL, this makes Flow Matching particularly useful when we want to:
 |---|---|---|---|
 | **Diagonal Gaussian** | Unimodal | Single network forward pass | Cannot naturally represent multiple distinct action modes |
 | **Diffusion policy** | Highly expressive and multimodal | Iterative stochastic denoising | Sampling can require many denoising steps |
-| **Flow-matching policy** | Highly expressive and multimodal | Integration of a learned ODE | Still requires numerical integration, although often with fewer steps than diffusion |
+| **Flow matching policy** | Highly expressive and multimodal | Integration of a learned ODE | Still requires numerical integration, although often with fewer steps than diffusion |
+
+## FM-RL Taxonomy
+
+The rapidly growing FM-RL literature can be organized along two complementary questions:
+
+1. **What does Flow Matching model inside the RL system?**  
+   For example, FM can represent an action policy, a value function, environment dynamics, preferences, or other distributions relevant to decision making.
+
+2. **How does the reinforcement-learning signal influence the flow model?**  
+   Existing methods differ in whether reward or value information enters through weighted flow-matching objectives, policy-gradient updates, stochasticized flow trajectories, group-relative optimization, or related mechanisms.
+
+This two-axis view helps connect methods that may appear very different at first glance while also making their key design differences explicit.
