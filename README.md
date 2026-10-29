@@ -120,6 +120,16 @@ This two-axis view helps connect methods that may appear very different at first
   <em>Figure 2: How Flow Matching is integrated with Reinforcement Learning. Offline methods typically incorporate RL signals during flow model training, while online methods optimize the policy using interaction and policy update mechanisms.</em>
 </p>
 
+<p align="center">
+  <img src="assets/figures/fm-rl-taxonomy-tree.svg"
+       alt="Taxonomy of Flow Matching in Reinforcement Learning"
+       width="100%">
+</p>
+
+<p align="center">
+  <em>Figure 3: Taxonomy of Flow Matching in Reinforcement Learning. Methods are organized into Offline Policy Learning, Online Policy Optimization, and applications Beyond Policy Learning.</em>
+</p>
+
 ### Axis A: What does the flow model?
 
 Flow Matching can play different roles inside an RL system. The first axis of our taxonomy asks **which distribution or object is represented by the flow**:
