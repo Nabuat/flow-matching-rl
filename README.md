@@ -149,3 +149,17 @@ Below is a curated selection of representative papers in Flow Matching for Reinf
 - **Flow Q-Learning (FQL)**: Park, Li, and Levine, 2025.  
   Trains a flow matching behavior policy and distills it into an expressive one-step policy that is optimized using Q-learning, avoiding backpropagation through the iterative flow process.  
   [Paper](https://arxiv.org/abs/2502.02538) · [Project Page](https://seohong.me/projects/fql/)
+
+  ### Online Policy Optimization
+
+- **Flow Matching Policy Gradients (FPO)**: McAllister, Ge, Yi, Kim, Weber, Choi, Feng, and Kanazawa, 2025.  
+  Introduces Flow Policy Optimization (FPO), an on-policy method that uses the conditional flow matching objective as a surrogate for policy optimization, avoiding exact likelihood computation while remaining compatible with PPO-style clipping.  
+  [Paper](https://arxiv.org/abs/2507.21053) · [Project Page](https://flowreinforce.github.io)
+
+- **ReinFlow: Fine-tuning Flow Matching Policy with Online Reinforcement Learning**: Zhang, Yu, Su, and Wang, 2025.  
+  Adds learnable noise to deterministic flow trajectories, turning them into a discrete time stochastic process with tractable transition likelihoods. This enables stable online RL fine tuning of flow policies for robotic control.  
+  [Paper](https://arxiv.org/abs/2505.22094) · [Project Page](https://reinflow.github.io/)
+
+- **Flow-GRPO: Training Flow Matching Models via Online RL**: Liu et al., 2025.  
+  Adapts Group Relative Policy Optimization (GRPO) to flow matching models by converting deterministic ODE sampling into an equivalent stochastic SDE formulation, enabling exploration and online reward based optimization.  
+  [Paper](https://arxiv.org/abs/2505.05470) · [Code](https://github.com/yifan123/flow_grpo)
