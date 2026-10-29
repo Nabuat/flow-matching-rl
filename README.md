@@ -23,6 +23,7 @@ We organize key papers, methods, code repositories, and learning resources to ma
 - [Flow Matching Basics](#flow-matching-basics)
 - [Why Flow Matching for RL?](#why-flow-matching-for-rl)
 - [FM-RL Taxonomy](#fm-rl-taxonomy)
+- [Foundational Reading](#foundational-reading)
 - [Key Papers](#key-papers)
 - [Code & Resources](#code--resources)
 - [Citation](#citation)
@@ -152,6 +153,36 @@ The second axis asks **how reward, value, or preference information is incorpora
 
 Together, Axes A and B provide a two-dimensional view of the field: **what the flow represents** and **how reinforcement learning information modifies it**.
 
+### Representative Methods at a Glance
+
+| Method | Setting | What FM models | How RL enters |
+|---|---|---|---|
+| **QIPO / EFM** | Offline RL | Action policy | Q/energy-weighted flow-matching regression |
+| **FlowQ** | Offline RL | Action policy | Q-guided training-time flow matching |
+| **FQL** | Offline / Offline-to-Online RL | Behavior policy + one-step actor | Q-learning with distillation from a flow policy |
+| **FPO** | Online RL | Action policy | Policy optimization using a flow-matching surrogate |
+| **ReinFlow** | Online RL | Action policy | Noise injection + policy optimization |
+| **Flow-GRPO** | Online RL / Alignment | Generative policy | Group-relative optimization after ODE-to-SDE conversion |
+| **floq** | Value-based RL | Q-function / critic | TD learning with a flow-matching critic |
+| **CompFlow** | Offline-to-Online RL | Transition dynamics | Flow-based dynamics modeling and Wasserstein gap estimation |
+| **PFM** | Preference alignment | Preference transformation | Direct learning from preference pairs |
+
+## Foundational Reading
+
+If you are new to Flow Matching itself, these papers are useful starting points before diving into FM-RL methods:
+
+- **Flow Matching for Generative Modeling**: Lipman, Chen, Ben-Hamu, Nickel, and Le, ICLR 2023.  
+  Introduces Flow Matching as a simulation-free framework for training continuous normalizing flows by regressing vector fields along conditional probability paths.  
+  [Paper](https://arxiv.org/abs/2210.02747)
+
+- **Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow**: Liu, Gong, and Liu, ICLR 2023.  
+  Introduces Rectified Flow, which learns approximately straight transport paths between distributions and motivates efficient ODE-based generation.  
+  [Paper](https://arxiv.org/abs/2209.03003)
+
+- **Flow Matching Guide and Code**: Lipman et al., 2024.  
+  A broader tutorial-style treatment of Flow Matching covering mathematical foundations, design choices, and practical implementations.  
+  [Paper](https://arxiv.org/abs/2412.06264)
+
 ## Key Papers
 
 Below is a curated selection of representative papers in Flow Matching for Reinforcement Learning. We organize them by the role that Flow Matching plays and the way RL information is incorporated.
@@ -224,6 +255,21 @@ Several FM-RL papers provide public implementations or project pages that are us
 
 - **On the Guidance of Flow Matching**: [GitHub](https://github.com/AI4Science-WestlakeU/flow_guidance)  
   General flow matching guidance methods, including experiments in offline RL.
+
+## Contributing
+
+We welcome suggestions that can help keep this resource useful and up to date.
+
+If you know of a relevant paper, code repository, project page, or other FM-RL resource that is missing, please feel free to **open an issue or submit a pull request**.
+
+When suggesting a paper, please include:
+
+- paper title and link,
+- authors and year,
+- code or project-page link, if available, and
+- a brief note explaining how the work relates to Flow Matching and Reinforcement Learning.
+
+Corrections and suggestions for improving the tutorial are also welcome.
 
   ## Citation
 
