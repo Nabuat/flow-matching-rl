@@ -1,2 +1,5 @@
-# Tutorial and resources for Flow Matching in Reinforcement Learning (FM-RL)
-A tutorial and resource hub for Flow Matching in Reinforcement Learning (FM-RL), accompanying our TMLR survey. Includes an introduction to FM-RL, a curated collection of papers, method taxonomy, code repositories, and resources for researchers and newcomers to the field.
+## Overview
+
+This website accompanies our TMLR survey, **“A Survey of Flow Matching in Reinforcement Learning.”** It is intended as a starting point for researchers and newcomers interested in the rapidly growing intersection of flow matching and reinforcement learning.
+
+We organize key papers, methods, code repositories, and learning resources to make the FM-RL literature easier to understand and navigate.
