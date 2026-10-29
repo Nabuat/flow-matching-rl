@@ -179,3 +179,45 @@ Flow Matching is increasingly being used for RL components beyond action-policy 
 - **Preference Alignment with Flow Matching (PFM)**: Kim, Lee, Kang, Oh, Chong, and Yun, 2024.  
   Learns a flow that transforms less-preferred outputs into preferred ones, providing a flow-based approach to **preference alignment** without explicitly learning a reward model.  
   [Paper](https://arxiv.org/abs/2405.19806) · [Code](https://github.com/jadehaus/preference-flow-matching)
+
+## Code & Resources
+
+Several FM-RL papers provide public implementations or project pages that are useful for reproducing results and understanding the methods in practice.
+
+- **Flow Q-Learning (FQL)**: [Project Page](https://seohong.me/projects/fql/)  
+  Offline RL with a flow matching behavior policy and a distilled one-step actor.
+
+- **Flow-GRPO**: [GitHub](https://github.com/yifan123/flow_grpo)  
+  Online GRPO-style optimization for flow matching generative models.
+
+- **ReinFlow**: [Project Page](https://reinflow.github.io/)  
+  Online RL fine tuning of flow matching policies for robotic control.
+
+- **Flow Matching Policy Gradients (FPO)**: [Project Page](https://flowreinforce.github.io)  
+  Resources accompanying Flow Policy Optimization.
+
+- **floq**: [GitHub](https://github.com/CMU-AIRe/floq)  
+  Flow matching-based Q-function modeling for value based RL.
+
+- **Preference Flow Matching (PFM)**: [GitHub](https://github.com/jadehaus/preference-flow-matching)  
+  Preference alignment using flow matching.
+
+- **On the Guidance of Flow Matching**: [GitHub](https://github.com/AI4Science-WestlakeU/flow_guidance)  
+  General flow matching guidance methods, including experiments in offline RL.
+
+  ## Citation
+
+If you find this survey or resource useful, please consider citing our paper:
+
+```bibtex
+@article{
+nahim2026a,
+title={A Survey of Flow Matching in Reinforcement Learning},
+author={Nabuat Zaman Nahim and Fairoz Nower Khan and Peizhong Ju},
+journal={Transactions on Machine Learning Research},
+issn={2835-8856},
+year={2026},
+url={https://openreview.net/forum?id=P6e5IC4gPe},
+note={Survey Certification}
+}
+```
