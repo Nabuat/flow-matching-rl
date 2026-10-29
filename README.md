@@ -130,4 +130,22 @@ The second axis asks **how reward, value, or preference information is incorpora
 - **Group-Relative Optimization (GRPO)**: Multiple samples are generated for the same condition, their rewards are compared within the group, and relative advantages are used to update the flow model. This family has become prominent in online fine-tuning of large generative flow models.
 - **Other Mechanisms**: Some methods use alternative strategies such as noise injection, one-step policy distillation, support constraints, or modifications to the flow generation process.
 
-Together, Axes A and B provide a two-dimensional view of the field: **what the flow represents** and **how reinforcement-learning information modifies it**.
+Together, Axes A and B provide a two-dimensional view of the field: **what the flow represents** and **how reinforcement learning information modifies it**.
+
+## Key Papers
+
+Below is a curated selection of representative papers in Flow Matching for Reinforcement Learning. We organize them by the role that Flow Matching plays and the way RL information is incorporated.
+
+### Offline Policy Learning
+
+- **Energy-Weighted Flow Matching for Offline Reinforcement Learning (QIPO / EFM)**: Zhang, Zhang, and Gu, 2025.  
+  Introduces energy-weighted flow matching and applies it to offline RL through Q-weighted Iterative Policy Optimization (QIPO), directly biasing the learned flow toward high value actions.  
+  [Paper](https://arxiv.org/abs/2503.04975)
+
+- **FlowQ: Energy-Guided Flow Policies for Offline Reinforcement Learning**: Alles, Chen, van der Smagt, and Cseke, 2025.  
+  Uses the Q-function as an energy signal to train an energy-guided flow policy, incorporating value guidance during training rather than at inference time.  
+  [Paper](https://arxiv.org/abs/2505.14139)
+
+- **Flow Q-Learning (FQL)**: Park, Li, and Levine, 2025.  
+  Trains a flow matching behavior policy and distills it into an expressive one-step policy that is optimized using Q-learning, avoiding backpropagation through the iterative flow process.  
+  [Paper](https://arxiv.org/abs/2502.02538) · [Project Page](https://seohong.me/projects/fql/)
