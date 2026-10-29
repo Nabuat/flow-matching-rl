@@ -2,3 +2,6 @@ title: Flow Matching in Reinforcement Learning
 description: Tutorial and resources for Flow Matching in Reinforcement Learning (FM-RL)
 theme: jekyll-theme-cayman
 show_downloads: false
+
+titles_from_headings:
+  enabled: false
