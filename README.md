@@ -99,3 +99,13 @@ The rapidly growing FM-RL literature can be organized along two complementary qu
    Existing methods differ in whether reward or value information enters through weighted flow-matching objectives, policy-gradient updates, stochasticized flow trajectories, group-relative optimization, or related mechanisms.
 
 This two-axis view helps connect methods that may appear very different at first glance while also making their key design differences explicit.
+
+<p align="center">
+  <img src="assets/figures/fm-rl-taxonomy.svg"
+       alt="How Flow Matching is integrated with Reinforcement Learning"
+       width="100%">
+</p>
+
+<p align="center">
+  <em>Figure 2: How Flow Matching is integrated with Reinforcement Learning. Offline methods typically incorporate RL signals during flow-model training, while online methods optimize the policy using interaction and policy-update mechanisms.</em>
+</p>
