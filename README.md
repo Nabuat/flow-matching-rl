@@ -95,8 +95,8 @@ The rapidly growing FM-RL literature can be organized along two complementary qu
 1. **What does Flow Matching model inside the RL system?**  
    For example, FM can represent an action policy, a value function, environment dynamics, preferences, or other distributions relevant to decision making.
 
-2. **How does the reinforcement-learning signal influence the flow model?**  
-   Existing methods differ in whether reward or value information enters through weighted flow-matching objectives, policy-gradient updates, stochasticized flow trajectories, group-relative optimization, or related mechanisms.
+2. **How does the reinforcement learning signal influence the flow model?**  
+   Existing methods differ in whether reward or value information enters through weighted flow matching objectives, policy gradient updates, stochasticized flow trajectories, group relative optimization, or related mechanisms.
 
 This two-axis view helps connect methods that may appear very different at first glance while also making their key design differences explicit.
 
@@ -107,5 +107,16 @@ This two-axis view helps connect methods that may appear very different at first
 </p>
 
 <p align="center">
-  <em>Figure 2: How Flow Matching is integrated with Reinforcement Learning. Offline methods typically incorporate RL signals during flow-model training, while online methods optimize the policy using interaction and policy-update mechanisms.</em>
+  <em>Figure 2: How Flow Matching is integrated with Reinforcement Learning. Offline methods typically incorporate RL signals during flow model training, while online methods optimize the policy using interaction and policy update mechanisms.</em>
 </p>
+
+### Axis A: What does the flow model?
+
+Flow Matching can play different roles inside an RL system. The first axis of our taxonomy asks **which distribution or object is represented by the flow**:
+
+- **Actions / Policies**: FM represents the conditional action distribution $\pi(a\mid s)$. This is the most common setting and allows the policy to model complex, multimodal actions.
+- **Critics / Values**: FM is used to represent value or return distributions rather than the policy itself.
+- **Dynamics / Transitions**: FM models conditional environment transition distributions, such as $p(s' \mid s,a)$.
+- **Preferences / Alignment**: FM models transformations or distributions associated with preference learning, alignment, or reward driven generation.
+
+Most existing FM-RL work focuses on **action-policy flows**, while critics, dynamics, and preference modeling remain comparatively less explored.
