@@ -1,3 +1,7 @@
+---
+title: Flow Matching in Reinforcement Learning
+---
+
 ## Overview
 
 This website accompanies our TMLR survey, **“A Survey of Flow Matching in Reinforcement Learning.”** It is intended as a starting point for researchers and newcomers interested in the rapidly growing intersection of flow matching and reinforcement learning.
