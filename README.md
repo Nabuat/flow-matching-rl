@@ -163,3 +163,19 @@ Below is a curated selection of representative papers in Flow Matching for Reinf
 - **Flow-GRPO: Training Flow Matching Models via Online RL**: Liu et al., 2025.  
   Adapts Group Relative Policy Optimization (GRPO) to flow matching models by converting deterministic ODE sampling into an equivalent stochastic SDE formulation, enabling exploration and online reward based optimization.  
   [Paper](https://arxiv.org/abs/2505.05470) · [Code](https://github.com/yifan123/flow_grpo)
+
+### Beyond Policies & Applications
+
+Flow Matching is increasingly being used for RL components beyond action-policy generation.
+
+- **floq: Training Critics via Flow-Matching for Scaling Compute in Value-Based RL**: Agrawalla, Nauman, Agrawal, and Kumar, 2025.  
+  Uses flow matching to parameterize the **Q-function itself**, turning value estimation into an iterative computation process with supervision across flow steps.  
+  [Paper](https://arxiv.org/abs/2509.06863) · [Code](https://github.com/CMU-AIRe/floq)
+
+- **Composite Flow Matching for Reinforcement Learning with Shifted-Dynamics Data (CompFlow)**: Kong, Wang, Wang, Xiong, and Tambe, 2025.  
+  Uses conditional flows to model **environment transition dynamics** and estimate the mismatch between offline and online dynamics through Wasserstein distance.  
+  [Paper](https://arxiv.org/abs/2505.23062)
+
+- **Preference Alignment with Flow Matching (PFM)**: Kim, Lee, Kang, Oh, Chong, and Yun, 2024.  
+  Learns a flow that transforms less-preferred outputs into preferred ones, providing a flow-based approach to **preference alignment** without explicitly learning a reward model.  
+  [Paper](https://arxiv.org/abs/2405.19806) · [Code](https://github.com/jadehaus/preference-flow-matching)
