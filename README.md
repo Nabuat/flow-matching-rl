@@ -120,3 +120,14 @@ Flow Matching can play different roles inside an RL system. The first axis of ou
 - **Preferences / Alignment**: FM models transformations or distributions associated with preference learning, alignment, or reward driven generation.
 
 Most existing FM-RL work focuses on **action-policy flows**, while critics, dynamics, and preference modeling remain comparatively less explored.
+
+### Axis B: How does the RL signal enter?
+
+The second axis asks **how reward, value, or preference information is incorporated into the flow model**. Existing approaches can be grouped into four broad mechanisms:
+
+- **Weighted Regression**: The standard flow matching loss is reweighted using reward, advantage, energy, or Q-value information so that higher value samples receive greater emphasis during training. This approach is especially common in offline RL.
+- **Direct / Surrogate Gradients**: The flow policy is optimized using policy gradient style objectives, either by differentiating through the flow process or by using a tractable surrogate objective that avoids exact flow likelihood computation.
+- **Group-Relative Optimization (GRPO)**: Multiple samples are generated for the same condition, their rewards are compared within the group, and relative advantages are used to update the flow model. This family has become prominent in online fine-tuning of large generative flow models.
+- **Other Mechanisms**: Some methods use alternative strategies such as noise injection, one-step policy distillation, support constraints, or modifications to the flow generation process.
+
+Together, Axes A and B provide a two-dimensional view of the field: **what the flow represents** and **how reinforcement-learning information modifies it**.
