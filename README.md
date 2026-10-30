@@ -72,11 +72,7 @@ A central challenge in reinforcement learning is choosing a policy representatio
 
 Many standard continuous-control algorithms use a diagonal Gaussian policy,
 
-$$
-\pi_\theta(a \mid s)
-=
-\mathcal{N}\!\left(a;\mu_\theta(s),\Sigma_\theta(s)\right),
-$$
+$$\pi_\theta(a \mid s)=\mathcal{N}\!\left(a;\mu_\theta(s),\Sigma_\theta(s)\right).$$
 
 which represents a single unimodal action distribution for each state. This can be restrictive when several distinct actions are all reasonable. For example, an agent navigating around an obstacle may be able to go either left or right. A unimodal policy may instead place probability mass between these two behaviors.
 
