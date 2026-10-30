@@ -228,11 +228,11 @@ Below is a curated selection of representative papers in Flow Matching for Reinf
   Learns completion vectors that allow a flow-based policy to generate actions in a single step, avoiding long iterative sampling and backpropagation chains while retaining an expressive policy representation.  
   [Paper](https://arxiv.org/abs/2506.21427)
 
-  - **ReFORM: Reflected Flows for On-support Offline RL via Noise Manipulation**: Zhang, So, Ahmad, Yu, Cleaveland, Black, and Fan, ICLR 2026.  
+- **ReFORM: Reflected Flows for On-support Offline RL via Noise Manipulation**: Zhang, So, Ahmad, Yu, Cleaveland, Black, and Fan, ICLR 2026.  
   Addresses **out of distribution actions in offline RL** by enforcing a support constraint directly through the flow policy construction. ReFORM first learns a behavior cloning flow with a bounded latent distribution, then optimizes a reflected flow that manipulates the latent noise while keeping it inside the original support, allowing policy improvement without leaving the behavior policy's action support.  
   [Paper](https://arxiv.org/abs/2602.05051)
 
-  ### Online Policy Optimization
+### Online Policy Optimization
 
 - **Flow Matching Policy Gradients (FPO)**: McAllister, Ge, Yi, Kim, Weber, Choi, Feng, and Kanazawa, ICLR 2026.  
   Introduces Flow Policy Optimization (FPO), an on-policy method that uses the conditional flow matching objective as a surrogate for policy optimization, avoiding exact likelihood computation while remaining compatible with PPO-style clipping.  
